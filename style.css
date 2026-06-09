@@ -267,6 +267,15 @@ body.loading {
     max-height: 160px;
 }
 
+.hero-section h1 {
+    font-size: 6.2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    white-space: nowrap;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
 /* User-defined logo specifications mapped to inline SVG text styling */
 .logo-text {
     color: #F8F8F8;
@@ -274,9 +283,9 @@ body.loading {
     stroke: #1a237e; /* Dark Navy Stroke */
     fill: var(--bg-color-bone); /* color matches background */
     stroke-width: 1.5px;
-    font-size: 7.2rem;
+    font-size: 6.2rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: -0.02em;
     paint-order: stroke fill;
     
     /* Animation inside Phase 3 branding */
@@ -293,9 +302,9 @@ body.loading {
 }
 
 .hero-subtitle {
-    font-size: 0.95rem;
-    letter-spacing: 0.4em;
-    color: var(--brand-navy);
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+    color: #333333;
     margin-top: 2rem;
     font-weight: 500;
     opacity: 0;
@@ -538,6 +547,9 @@ body.loading {
    Responsive Queries
    ========================================================================== */
 @media (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 5.5rem;
+    }
     .logo-text {
         font-size: 5.5rem;
     }
@@ -556,12 +568,17 @@ body.loading {
     .main-nav {
         display: none; /* simple burger menu / hide for elegance */
     }
+    .hero-section h1 {
+        font-size: 3.5rem;
+        white-space: normal;
+    }
     .logo-text {
         font-size: 3.5rem;
     }
     .hero-subtitle {
-        font-size: 0.8rem;
-        letter-spacing: 0.25em;
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
     }
     .section {
         padding: 5rem 6%;
