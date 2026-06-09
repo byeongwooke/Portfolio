@@ -1,0 +1,11 @@
+{
+  "name": "yoo-byeongwook-portfolio",
+  "version": "1.0.0",
+  "description": "Premium portfolio page with high-quality loading transition",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Antigravity",
+  "license": "ISC"
+}

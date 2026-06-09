@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOO BYEONGWOOK | Creative Planner</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Phase 1 & 2: Loading Overlay & Shutter Panels -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="shutter-panel top" id="shutterTop"></div>
+        <div class="shutter-panel bottom" id="shutterBottom"></div>
+        <div class="center-line" id="centerLine"></div>
+        <div class="typing-container" id="typingContainer">
+            <span class="typing-text" id="typingText"></span>
+            <span class="cursor">|</span>
+        </div>
+    </div>
+
+    <!-- Phase 3: Main Branding & Portfolio Content -->
+    <main class="portfolio-container">
+        <!-- Navigation Header -->
+        <header class="main-header">
+            <div class="header-logo">
+                <span class="logo-text-small">Y.B.W</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#work" class="nav-link">Selected Works</a>
+                <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#profile" class="nav-link">Profile</a>
+            </nav>
+            <div class="header-contact">
+                <a href="mailto:contact@yoobyeongwook.com" class="btn-contact">Inquire</a>
+            </div>
+        </header>
+
+        <!-- Hero Section featuring the large logo -->
+        <section class="hero-section">
+            <div class="hero-brand-wrapper">
+                <!-- Using inline SVG text for precise cross-browser support of custom stroke properties -->
+                <svg class="brand-logo-svg" viewBox="0 0 1200 160">
+                    <text x="50%" y="70%" text-anchor="middle" class="logo-text">YOO BYEONGWOOK</text>
+                </svg>
+                <p class="hero-subtitle">CREATIVE PLANNER & BRAND DIRECTOR</p>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span class="scroll-label">Scroll to Explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Selected Works Grid -->
+        <section id="work" class="section works-section">
+            <div class="section-header">
+                <span class="section-number">01 /</span>
+                <h2 class="section-title">Selected Works</h2>
+            </div>
+            <div class="works-grid">
+                <div class="work-card">
+                    <div class="work-image-placeholder" style="background-color: #ECEBE9;">
+                        <span class="work-category">Brand Identity</span>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">The Minimalist Manifesto</h3>
+                        <p class="work-desc">Rebranding a heritage tea company with a contemporary editorial perspective.</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-image-placeholder" style="background-color: #E2E1DF;">
+                        <span class="work-category">Creative Direction</span>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">A Space of Silence</h3>
+                        <p class="work-desc">Spatial curation and exhibition layout for the Seoul Design Biennale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="section philosophy-section">
+            <div class="section-header">
+                <span class="section-number">02 /</span>
+                <h2 class="section-title">Philosophy</h2>
+            </div>
+            <div class="philosophy-content">
+                <p class="philosophy-quote">
+                    "기획자의 정갈함은 불필요한 장식을 걷어내고 대상의 본질적 가치를 정밀하게 정렬하는 데서 출발합니다."
+                </p>
+                <p class="philosophy-body">
+                    우리는 과잉의 시대에 살고 있습니다. 화려한 기교와 현란한 그래픽 대신, 구조의 미학적 정돈과 타이포그래피의 명료함에 집중합니다. 
+                    기획은 말과 글, 공간과 비주얼이 하나의 완성된 내러티브로 정렬될 때 비로소 울림을 갖습니다. 
+                    단순함은 비우는 것이 아닌, 더 이상 뺄 것이 없는 완벽한 채움의 상태를 의미합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Profile / Contact Section -->
+        <section id="profile" class="section profile-section">
+            <div class="section-header">
+                <span class="section-number">03 /</span>
+                <h2 class="section-title">About & Contact</h2>
+            </div>
+            <div class="profile-grid">
+                <div class="profile-details">
+                    <p class="profile-bio">
+                        유병욱(Yoo Byeongwook)은 브랜드의 태동부터 전개까지 브랜드 저변의 언어적, 시각적 질서를 조율하는 브랜드 디렉터입니다. 
+                        국내 유수의 라이프스타일 브랜드 및 디자인 하우스와의 협업을 통해 시대를 관통하는 정갈한 작업물을 제안해왔습니다.
+                    </p>
+                </div>
+                <div class="profile-contact-info">
+                    <div class="info-item">
+                        <span class="info-label">Email</span>
+                        <a href="mailto:contact@yoobyeongwook.com" class="info-value">contact@yoobyeongwook.com</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Social</span>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="info-value">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p class="copyright">&copy; 2026 YOO BYEONGWOOK. All Rights Reserved.</p>
+            <p class="footer-tagline">Crafted with discipline and precision.</p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
