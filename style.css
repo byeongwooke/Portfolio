@@ -517,27 +517,42 @@ body.loading {
 }
 
 /* Philosophy Section */
-.philosophy-content {
-    max-width: 800px;
-    margin: 0 auto;
+#philosophy {
+    padding: 120px 8%;
+    background: var(--bg-color-bone); /* Bone White 무드 유지 */
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    justify-content: center;
 }
 
-.philosophy-quote {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    line-height: 1.6;
-    color: var(--brand-navy);
+.philosophy-container {
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    font-weight: 400;
 }
 
-.philosophy-body {
+.philosophy-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    word-break: keep-all;
+    margin-bottom: 40px;
+}
+
+.philosophy-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--brand-navy); /* Dark Navy 포인트 라인 */
+    margin: 0 auto 40px auto;
+}
+
+.philosophy-description {
     font-size: 1.05rem;
-    line-height: 1.8;
     color: var(--text-secondary);
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+    word-break: keep-all;
     text-align: justify;
 }
 
@@ -660,8 +675,19 @@ body.loading {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .philosophy-quote {
-        font-size: 1.5rem;
+    #philosophy {
+        padding: 80px 6%;
+    }
+    .philosophy-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    .philosophy-divider {
+        margin-bottom: 30px;
+    }
+    .philosophy-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
     .profile-grid {
         grid-template-columns: 1fr;
