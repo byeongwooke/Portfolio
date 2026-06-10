@@ -518,18 +518,18 @@ body.loading {
 
 /* Philosophy Section */
 #philosophy {
-    padding: 120px 8%;
+    padding: 100px 5%;
     background: var(--bg-color-bone); /* Bone White 무드 유지 */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* 01번 섹션과 동일하게 전면 좌측 정렬 시작 */
 }
 
 .philosophy-container {
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
-    margin: 40px auto 0 auto;
-    text-align: center;
+    margin: 50px 0 0 0; /* 상단 헤더와의 정갈한 여백 */
+    text-align: left;    /* 중앙 정렬 전면 배제 및 좌측 정렬 명시 */
 }
 
 .philosophy-slogan {
@@ -539,14 +539,15 @@ body.loading {
     line-height: 1.5;
     letter-spacing: -0.03em;
     word-break: keep-all;
-    margin: 0 0 30px 0;
+    margin: 0 0 24px 0;
+    text-align: left;
 }
 
 .philosophy-divider {
     width: 40px;
     height: 1px;
     background: var(--brand-navy); /* Dark Navy 포인트 라인 */
-    margin: 0 auto 30px auto;
+    margin: 0 0 32px 0;   /* 왼쪽 시작 마감 */
 }
 
 .philosophy-description {
@@ -555,7 +556,7 @@ body.loading {
     line-height: 1.8;
     letter-spacing: -0.01em;
     word-break: keep-all;
-    text-align: justify;
+    text-align: left;     /* 전체 줄글 양끝 정렬 대신 깔끔한 좌측 정렬 */
 }
 
 /* Profile Section */
@@ -678,14 +679,14 @@ body.loading {
         gap: 3rem;
     }
     #philosophy {
-        padding: 80px 6%;
+        padding: 60px 6%;
     }
     .philosophy-slogan {
         font-size: 1.6rem;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .philosophy-divider {
-        margin-bottom: 30px;
+        margin: 0 0 24px 0;
     }
     .philosophy-description {
         font-size: 0.95rem;
