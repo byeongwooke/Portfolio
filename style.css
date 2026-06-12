@@ -559,34 +559,21 @@ section:not(.hero-section) {
     margin: 0 0 24px 0;
 }
 
-/* 담백한 포트폴리오 포맷 전용 스타일 */
-.philosophy-bullets {
+.philosophy-prose-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* 줄글 문단 간의 정갈한 여백 */
     width: 100%;
 }
 
-.bullet-row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-}
-
-.bullet-keyword {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--brand-navy); /* 아이덴티티 포인트 네이비 */
-    letter-spacing: -0.01em;
-}
-
-.bullet-text {
-    font-size: 0.95rem;
+.philosophy-prose-line {
+    font-size: 1.0rem;
     color: var(--text-secondary);
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
     word-break: keep-all;
+    text-align: left; /* 완벽한 글로벌 규칙 기준 좌측 정렬 */
+    margin: 0;
 }
 
 /* Profile Section */
@@ -728,9 +715,9 @@ section:not(.hero-section) {
     .philosophy-divider {
         margin: 0 0 24px 0;
     }
-    .bullet-text {
-        font-size: 0.9rem;
-        line-height: 1.5;
+    .philosophy-prose-line {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
     .profile-grid {
         grid-template-columns: 1fr;
