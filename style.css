@@ -371,46 +371,47 @@ body.loading {
 /* ==========================================================================
    Values Styles
    ========================================================================== */
-.value-item {
+.value-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    padding: 30px;
+    background: #FFFFFF; /* 슬로건 영역과 대비되는 정갈한 카드 면 분할 */
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
 }
 
-.value-header {
+.value-card-header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 12px;
 }
 
-.en-title {
-    font-family: var(--font-serif);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--brand-navy); /* Dark Navy 포인트 */
-    display: block;
-    margin-bottom: 2px;
-}
-
-.ko-title {
-    font-size: 1.4rem;
+.ko-main {
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 0 12px 0;
+    margin: 0;
 }
 
-.value-lead {
-    font-size: 1.05rem;
+.en-sub {
+    font-size: 0.85rem;
     font-weight: 500;
-    color: #222222;
-    line-height: 1.4;
-    margin-bottom: 10px;
-    word-break: keep-all;
+    color: #888888;
+    text-transform: uppercase;
 }
 
-.value-body {
-    font-size: 0.95rem;
+.value-card-lead {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: var(--brand-navy);
+    margin: 0 0 14px 0;
+}
+
+.value-card-body {
+    font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
@@ -524,32 +525,30 @@ section:not(.hero-section) {
 }
 
 /* Philosophy & Values Section */
-.split-hybrid-container {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr; /* 슬로건 가독성을 위해 좌측 비율 미세 확장 */
-    gap: 60px;
+.philosophy-slogan-zone {
     width: 100%;
-    align-items: start;
-}
-
-/* 좌측 철학 영역 스타일링 */
-.left-philosophy-zone {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 50px;
-    border-right: 1px solid #EAEAEA;
-}
-
-.philosophy-clean-prose {
-    font-size: 1.05rem;
-    color: #444444;
-    line-height: 1.9;
-    letter-spacing: -0.015em;
-    word-break: keep-all;
+    margin: 40px 0 60px 0;
     text-align: left;
-    max-width: 520px; /* 컨테이너 폭을 조율하여 PC 해상도에서 정갈하게 딱 3줄 반 안팎으로 떨어지도록 유도 */
+}
+
+.philosophy-slogan {
+    font-size: 1.5rem; /* 한 줄 정렬 시 브라우저 폭을 초과하지 않도록 최적화된 서체 크기 */
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    white-space: nowrap; /* 강제 줄바꿈 방지 */
+    word-break: normal;
     margin: 0;
+}
+
+.philosophy-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    align-items: stretch; /* 3개 카드의 높이를 400px 안에서 균일하게 통일 */
 }
 
 /* Profile Section */
@@ -643,15 +642,14 @@ section:not(.hero-section) {
 }
 
 @media (max-width: 968px) {
-    .split-hybrid-container {
-        grid-template-columns: 1fr; /* 모바일에서는 1열 세로 레이아웃으로 전환 */
-        gap: 60px;
+    .philosophy-values {
+        grid-template-columns: 1fr;
+        height: auto; /* 모바일에서는 가로 적층이 불가하므로 스크롤 확보를 위해 높이 자동 전환 */
+        gap: 20px;
     }
-    .left-philosophy-zone {
-        padding-right: 0;
-        border-right: none;
-        padding-bottom: 40px;
-        border-bottom: 1px solid #E5E5E5;
+    .philosophy-slogan {
+        white-space: normal; /* 모바일 스크린 폭 제한에 맞춰 모바일에서만 자연스러운 줄바꿈 허용 */
+        font-size: 1.25rem;
     }
 }
 
@@ -683,10 +681,6 @@ section:not(.hero-section) {
     .works-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-    .philosophy-clean-prose {
-        font-size: 0.95rem;
-        line-height: 1.7;
     }
     .profile-grid {
         grid-template-columns: 1fr;
