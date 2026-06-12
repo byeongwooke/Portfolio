@@ -541,38 +541,14 @@ section:not(.hero-section) {
     border-right: 1px solid #EAEAEA;
 }
 
-.philosophy-slogan {
-    font-size: 1.95rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    line-height: 1.45;
-    letter-spacing: -0.03em;
+.philosophy-clean-prose {
+    font-size: 1.05rem;
+    color: #444444;
+    line-height: 1.9;
+    letter-spacing: -0.015em;
     word-break: keep-all;
-    margin: 0 0 24px 0;
     text-align: left;
-}
-
-.philosophy-divider {
-    width: 40px;
-    height: 1px;
-    background: var(--brand-navy);
-    margin: 0 0 24px 0;
-}
-
-.philosophy-prose-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* 줄글 문단 간의 정갈한 여백 */
-    width: 100%;
-}
-
-.philosophy-prose-line {
-    font-size: 1.0rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    letter-spacing: -0.01em;
-    word-break: keep-all;
-    text-align: left; /* 완벽한 글로벌 규칙 기준 좌측 정렬 */
+    max-width: 520px; /* 컨테이너 폭을 조율하여 PC 해상도에서 정갈하게 딱 3줄 반 안팎으로 떨어지도록 유도 */
     margin: 0;
 }
 
@@ -708,14 +684,7 @@ section:not(.hero-section) {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .philosophy-slogan {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
-    .philosophy-divider {
-        margin: 0 0 24px 0;
-    }
-    .philosophy-prose-line {
+    .philosophy-clean-prose {
         font-size: 0.95rem;
         line-height: 1.7;
     }
