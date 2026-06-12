@@ -526,8 +526,8 @@ section:not(.hero-section) {
 /* Philosophy & Values Section */
 .split-hybrid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 화면 정확히 세로로 절반 분할 */
-    gap: 80px;
+    grid-template-columns: 1.1fr 0.9fr; /* 슬로건 가독성을 위해 좌측 비율 미세 확장 */
+    gap: 60px;
     width: 100%;
     align-items: start;
 }
@@ -537,15 +537,15 @@ section:not(.hero-section) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-right: 40px;
-    border-right: 1px solid #E5E5E5; /* 정갈한 세로 구분선 마감 */
+    padding-right: 50px;
+    border-right: 1px solid #EAEAEA;
 }
 
 .philosophy-slogan {
-    font-size: 2.0rem;
+    font-size: 1.95rem;
     font-weight: 600;
     color: var(--text-primary);
-    line-height: 1.5;
+    line-height: 1.45;
     letter-spacing: -0.03em;
     word-break: keep-all;
     margin: 0 0 24px 0;
@@ -559,13 +559,34 @@ section:not(.hero-section) {
     margin: 0 0 24px 0;
 }
 
-.philosophy-description {
-    font-size: 1.0rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
+/* 담백한 포트폴리오 포맷 전용 스타일 */
+.philosophy-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.bullet-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.bullet-keyword {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--brand-navy); /* 아이덴티티 포인트 네이비 */
     letter-spacing: -0.01em;
+}
+
+.bullet-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
     word-break: keep-all;
-    text-align: left;
 }
 
 /* Profile Section */
@@ -707,9 +728,9 @@ section:not(.hero-section) {
     .philosophy-divider {
         margin: 0 0 24px 0;
     }
-    .philosophy-description {
-        font-size: 0.95rem;
-        line-height: 1.7;
+    .bullet-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     .profile-grid {
         grid-template-columns: 1fr;
